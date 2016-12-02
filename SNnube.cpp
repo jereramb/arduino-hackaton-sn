@@ -185,6 +185,10 @@ int SNnube::Begin(uint8_t *mac_address) {
 	return Ethernet.begin(mac_address);
 }
 
+void SNnube::Begin(uint8_t *mac_address, IPAddress ip) {
+	Ethernet.begin(mac_address, ip); 
+}
+
 void SNnube::Close() {
 	if (!_client.connected()) {
 		_client.stop();

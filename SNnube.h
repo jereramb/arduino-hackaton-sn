@@ -46,6 +46,7 @@ class SNnube
 		void AddParameter(const __FlashStringHelper * key, const __FlashStringHelper * value);
 
 		int Begin(uint8_t *mac_address);
+		void Begin(uint8_t *mac_address, IPAddress ip);
 		void Close();
 		void Read(char* resp, int maxLen);
 		int Send();
